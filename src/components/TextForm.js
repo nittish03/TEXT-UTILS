@@ -41,10 +41,10 @@ toast.success("Extra spaces successfully removed")
 // end-------------------------------------------------------------------------------------------------------------------------------
     return (
 <>
-<div className='container'>
+<div style={{overflowX:"hidden"}} className='container'>
 <h2 style={{marginTop:"6vh"}} >{props.heading}</h2>
 <div className="mb-3">
-    <textarea className="form-control" value={text}  onChange={HandleOnChange} id="myBox" rows=""></textarea>
+    <textarea style={{minHeight:"30vh",overflowX:"hidden"}} className="form-control" value={text}  onChange={HandleOnChange} id="myBox" rows=""></textarea>
 </div>
 <button className={`btn btn-${props.buttonColor} mx-2 m-3`} onClick={HandleUpClick}>Convert to upper case</button>
 <button className={`btn btn-${props.buttonColor} mx-2 m-3`} onClick={HandleDownClick}>Convert to lower case</button>
