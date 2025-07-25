@@ -32,12 +32,13 @@ const HandleCopy=()=>{
     toast.success("text has been successfully copied");
 
 }
-const HandleExtraSpaces=()=>{
-let newText= text.split(/[ ]+/);
-setText(newText.join(" "));
-toast.success("Extra spaces successfully removed")
-
+const HandleExtraSpaces = () => {
+    // Remove all extra whitespace (spaces, tabs, newlines) and trim
+    let newText = text.replace(/\s+/g, ' ').trim();
+    setText(newText);
+    toast.success("Extra spaces successfully removed");
 }
+
 // end-------------------------------------------------------------------------------------------------------------------------------
     return (
 <>
